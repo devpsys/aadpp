@@ -13,7 +13,7 @@
             android:name=".ui.activities.SubmitActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.activities.MainActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ui.activities.SplashActivity"
