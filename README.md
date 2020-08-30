@@ -1,6 +1,6 @@
 # Associate Android Developer Practice Project
 
-Building a GADS Leaderboard Mobile Application
+##Building a GADS Leaderboard Mobile Application
 
 Description
 
