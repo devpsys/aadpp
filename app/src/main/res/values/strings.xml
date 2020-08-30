@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">AADPP</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="label_leaderboard">Leaderboard</string>
+    <string name="btn_label_submit">Submit</string>
+    <string name="desc_gads_banner">Gads Banner</string>
+    <string name="label_project_submission">Project Submission</string>
+    <string name="desc_back_button">Back Button</string>
+</resources>
