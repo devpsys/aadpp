@@ -1,61 +1,168 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/main_bg"
-    tools:context=".ui.activities.SubmitActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="?actionBarSize"
-        android:layout_marginEnd="?actionBarSize"
-        android:contentDescription="@string/desc_gads_banner"
-        app:layout_constraintBottom_toBottomOf="@+id/ibBack"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/ibBack"
-        app:srcCompat="@drawable/gads_header" />
+    </data>
 
-    <ImageButton
-        android:id="@+id/ibBack"
-        android:layout_width="?actionBarSize"
-        android:layout_height="?actionBarSize"
-        android:layout_marginTop="@dimen/dimens_8"
-        android:background="@android:color/transparent"
-        android:contentDescription="@string/desc_back_button"
-        android:tint="@android:color/white"
-        app:layout_constraintEnd_toStartOf="@+id/imageView2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_arrow_back" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="@string/label_project_submission"
-        android:textColor="@color/colorAccent"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
-
-    <TextView
-        android:id="@+id/textView"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginStart="?actionBarSize"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="?actionBarSize"
-        android:background="@drawable/gradient"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_height="match_parent"
+        android:background="@drawable/main_bg"
+        tools:context=".ui.activities.SubmitActivity">
+
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="?actionBarSize"
+            android:layout_marginEnd="?actionBarSize"
+            android:contentDescription="@string/desc_gads_banner"
+            app:layout_constraintBottom_toBottomOf="@+id/ibBack"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ibBack"
+            app:srcCompat="@drawable/gads_header" />
+
+        <ImageButton
+            android:id="@+id/ibBack"
+            android:layout_width="?actionBarSize"
+            android:layout_height="?actionBarSize"
+            android:layout_marginTop="@dimen/dimens_8"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/desc_back_button"
+            android:tint="@android:color/white"
+            app:layout_constraintEnd_toStartOf="@+id/imageView2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_arrow_back" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/label_project_submission"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="?actionBarSize"
+            android:layout_marginTop="@dimen/dimens_8"
+            android:layout_marginEnd="?actionBarSize"
+            android:background="@drawable/gradient"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <EditText
+            android:id="@+id/edtFName"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimens_40"
+            android:layout_marginStart="@dimen/dimens_16"
+            android:layout_marginTop="?actionBarSize"
+            android:layout_marginEnd="@dimen/dimens_4"
+            android:background="@drawable/input_background"
+            android:ems="10"
+            android:hint="@string/hint_first_name"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="textCapWords"
+            android:nextFocusForward="@id/edtLName"
+            android:paddingStart="@dimen/dimens_16"
+            android:paddingEnd="@dimen/dimens_16"
+            android:textColorHint="@color/colorHintText"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/edtLName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <EditText
+            android:id="@+id/edtLName"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimens_40"
+            android:layout_marginStart="@dimen/dimens_4"
+            android:layout_marginEnd="@dimen/dimens_16"
+            android:background="@drawable/input_background"
+            android:ems="10"
+            android:hint="@string/hint_last_name"
+            android:importantForAutofill="no"
+            android:inputType="textCapWords"
+            android:nextFocusDown="@id/edtEmail"
+            android:paddingStart="@dimen/dimens_16"
+            android:paddingEnd="@dimen/dimens_16"
+            android:textColorHint="@color/colorHintText"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/edtFName"
+            app:layout_constraintTop_toTopOf="@+id/edtFName" />
+
+        <EditText
+            android:id="@+id/edtEmail"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimens_40"
+            android:layout_marginStart="@dimen/dimens_16"
+            android:layout_marginTop="?actionBarSize"
+            android:layout_marginEnd="@dimen/dimens_16"
+            android:background="@drawable/input_background"
+            android:ems="10"
+            android:hint="@string/hint_email_address"
+            android:importantForAutofill="no"
+            android:inputType="textEmailAddress"
+            android:paddingStart="@dimen/dimens_16"
+            android:paddingEnd="@dimen/dimens_16"
+            android:textColorHint="@color/colorHintText"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtFName" />
+
+        <EditText
+            android:id="@+id/edtLink"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimens_40"
+            android:layout_marginStart="@dimen/dimens_16"
+            android:layout_marginTop="?actionBarSize"
+            android:layout_marginEnd="@dimen/dimens_16"
+            android:background="@drawable/input_background"
+            android:ems="10"
+            android:hint="@string/hint_project_link"
+            android:importantForAutofill="no"
+            android:inputType="textWebEditText"
+            android:paddingStart="@dimen/dimens_16"
+            android:paddingEnd="@dimen/dimens_16"
+            android:textColorHint="@color/colorHintText"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtEmail" />
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="@dimen/dimens_200"
+            android:layout_height="@dimen/dimens_40"
+            android:layout_marginTop="@dimen/dimens_100"
+            android:background="@drawable/btn_submit_background_alt"
+            android:minWidth="@dimen/dimens_120"
+            android:text="@string/btn_label_submit"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtLink" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

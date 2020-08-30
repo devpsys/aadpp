@@ -12,4 +12,8 @@
     <dimen name="dimens_6">6dp</dimen>
     <dimen name="dimens_120">120dp</dimen>
     <dimen name="dimens_8">8dp</dimen>
+    <dimen name="dimens_40">40dp</dimen>
+    <dimen name="dimens_4">4dp</dimen>
+    <dimen name="dimens_20">20dp</dimen>
+    <dimen name="dimens_200">200dp</dimen>
 </resources>

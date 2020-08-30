@@ -7,4 +7,8 @@
     <string name="desc_gads_banner">Gads Banner</string>
     <string name="label_project_submission">Project Submission</string>
     <string name="desc_back_button">Back Button</string>
+    <string name="hint_first_name">First Name</string>
+    <string name="hint_last_name">Last Name</string>
+    <string name="hint_email_address">Email Address</string>
+    <string name="hint_project_link">Project on GITHUB (link)</string>
 </resources>
