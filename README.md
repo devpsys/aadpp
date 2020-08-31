@@ -1,4 +1,4 @@
-# Google Africa Developer Scholarship Phase II
+# Google Africa Developer Scholarship Phase II (GADS 2020)
 # Associate Android Developer Practice Project (AADPP)
 #### Building a GADS Leaderboard Mobile Application
 
