@@ -23,9 +23,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@{model.size()==0&amp;&amp;!model.loading?@string/msg_no_record:@string/label_loading}"
+            android:text="@{model.records().size()==0&amp;&amp;!model.loading?@string/msg_no_record:@string/label_loading}"
             android:textSize="14sp"
-            android:visibility="@{model.size()==0?View.VISIBLE:View.GONE}" />
+            android:visibility="@{model.records().size()==0?View.VISIBLE:View.GONE}" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvRecords"

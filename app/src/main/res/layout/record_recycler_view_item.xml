@@ -27,11 +27,12 @@
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_marginStart="@dimen/dimens_8"
+                android:contentDescription="@string/desc_leader_banner"
+                app:badgeUrl="@{record.badgeUrl}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintDimensionRatio="1:1"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/top_learner" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -47,14 +48,14 @@
                     android:id="@+id/tvName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Pharis Muigui"
+                    android:text="@{record.name}"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tvInfo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="223 learning hours, Kenya."
+                    android:text="@{(record.score==-1? record.hours + ` learning hours, `: record.score + ` skill IQ Score, `) + record.country}"
                     android:textSize="12sp" />
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>

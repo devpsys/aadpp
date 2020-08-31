@@ -1,6 +1,7 @@
 package me.devpsys.apps.gads2020.aadpp.app.ui.fragments
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -44,6 +45,7 @@ class RecordsFragment : Fragment() {
         mBinding.model = viewModel
         mBinding.rvRecords.adapter = RecordsAdapter()
 
+        viewModel.loadRecords()
         viewModel.records().observe(viewLifecycleOwner, Observer {
             it?.let { records ->
                 (mBinding.rvRecords.adapter as RecordsAdapter).records(records)

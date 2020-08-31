@@ -14,7 +14,7 @@ class RecordsAdapter : RecyclerView.Adapter<RecordsAdapter.RecordViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecordViewHolder =
         RecordViewHolder(
-            RecordRecyclerViewItemBinding.inflate(LayoutInflater.from(parent.context)).root
+            RecordRecyclerViewItemBinding.inflate(LayoutInflater.from(parent.context))
         )
 
     override fun onBindViewHolder(holder: RecordViewHolder, position: Int) {
@@ -29,11 +29,11 @@ class RecordsAdapter : RecyclerView.Adapter<RecordsAdapter.RecordViewHolder>() {
         notifyDataSetChanged()
     }
 
-    inner class RecordViewHolder(override val containerView: View) :
-        RecyclerView.ViewHolder(containerView), LayoutContainer {
+    class RecordViewHolder(private val binding: RecordRecyclerViewItemBinding) :
+        RecyclerView.ViewHolder(binding.root) {
 
         fun bind(record: Record) {
-
+            binding.record = record
         }
     }
 

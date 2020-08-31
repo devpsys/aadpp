@@ -13,4 +13,5 @@
     <string name="hint_project_link">Project on GITHUB (link)</string>
     <string name="label_loading">Loading...</string>
     <string name="msg_no_record">No record available</string>
+    <string name="desc_leader_banner">Leader Banner</string>
 </resources>
