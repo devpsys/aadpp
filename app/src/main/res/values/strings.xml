@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">AADPP</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_1">Learning Leaders</string>
+    <string name="tab_text_2">Skill IQ Leaders</string>
     <string name="label_leaderboard">Leaderboard</string>
     <string name="btn_label_submit">Submit</string>
     <string name="desc_gads_banner">Gads Banner</string>
@@ -11,4 +11,6 @@
     <string name="hint_last_name">Last Name</string>
     <string name="hint_email_address">Email Address</string>
     <string name="hint_project_link">Project on GITHUB (link)</string>
+    <string name="label_loading">Loading...</string>
+    <string name="msg_no_record">No record available</string>
 </resources>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="model"
+            type="me.devpsys.apps.gads2020.aadpp.app.vmodels.RecordsViewModel" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground"
+        tools:context=".ui.fragments.RecordsFragment">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@{model.size()==0&amp;&amp;!model.loading?@string/msg_no_record:@string/label_loading}"
+            android:textSize="14sp"
+            android:visibility="@{model.size()==0?View.VISIBLE:View.GONE}" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvRecords"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/dimens_8"
+            android:layout_marginTop="@dimen/dimens_16"
+            android:layout_marginEnd="@dimen/dimens_8"
+            android:visibility="@{model.size()>0&amp;&amp;!model.loading?View.VISIBLE:View.GONE}"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            tools:listitem="@layout/record_recycler_view_item" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="@dimen/dimens_32"
+            android:layout_height="@dimen/dimens_32"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/dimens_32"
+            android:visibility="@{model.loading?View.VISIBLE:View.GONE}" />
+    </FrameLayout>
+</layout>

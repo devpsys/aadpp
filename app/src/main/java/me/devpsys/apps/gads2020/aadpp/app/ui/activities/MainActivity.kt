@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import me.devpsys.apps.gads2020.aadpp.app.R
 import me.devpsys.apps.gads2020.aadpp.app.databinding.ActivityMainBinding
-import me.devpsys.apps.gads2020.aadpp.app.ui.main.SectionsPagerAdapter
+import me.devpsys.apps.gads2020.aadpp.app.adatpters.SectionsPagerAdapter
 
 class MainActivity : AppCompatActivity() {
 
