@@ -5,6 +5,11 @@
 
     <data>
 
+        <import type="android.view.View" />
+
+        <variable
+            name="loading"
+            type="Boolean" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -155,12 +160,24 @@
             android:id="@+id/btnSubmit"
             android:layout_width="@dimen/dimens_200"
             android:layout_height="@dimen/dimens_40"
-            android:layout_marginTop="@dimen/dimens_100"
+            android:layout_marginTop="32dp"
             android:background="@drawable/btn_submit_background_alt"
+            android:enabled="@{loading?false:true}"
             android:minWidth="@dimen/dimens_120"
             android:text="@string/btn_label_submit"
             android:textAllCaps="false"
             android:textColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progressBar2" />
+
+        <ProgressBar
+            android:id="@+id/progressBar2"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="@dimen/dimens_32"
+            android:layout_height="@dimen/dimens_32"
+            android:layout_marginTop="32dp"
+            android:visibility="@{loading?View.VISIBLE:View.INVISIBLE}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/edtLink" />

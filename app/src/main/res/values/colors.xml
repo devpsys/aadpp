@@ -7,4 +7,7 @@
 
     <color name="colorBackground">#FAFAFA</color>
     <color name="colorHintText">#717171</color>
+    <color name="colorTextDefault">#626262</color>
+    <color name="colorDanger">#FA0404</color>
+    <color name="colorSuccess">#05920B</color>
 </resources>

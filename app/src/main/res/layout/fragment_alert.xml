@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="type"
+            type="String" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.fragments.AlertFragment">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimens_300"
+            android:minHeight="@dimen/dimens_300"
+            app:cardCornerRadius="@dimen/dimens_8"
+            app:cardElevation="@dimen/dimens_6"
+            app:cardUseCompatPadding="true"
+            app:contentPadding="@dimen/dimens_16"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="@{type==`confirmation`?View.VISIBLE:View.GONE}">
+
+                    <ImageButton
+                        android:id="@+id/ibCancel"
+                        android:layout_width="@dimen/dimens_40"
+                        android:layout_height="@dimen/dimens_40"
+                        android:background="@android:color/transparent"
+                        android:contentDescription="@string/desc_back_button"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_cancel"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimens_40"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/ibCancel">
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_are_you_sure"
+                            android:textColor="@color/colorTextDefault"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/imageView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/desc_question_mark"
+                            android:src="@drawable/ic_question"
+                            app:tint="@color/colorTextDefault" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btnYes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dimens_40"
+                        android:layout_marginTop="?actionBarSize"
+                        android:layout_marginBottom="?actionBarSize"
+                        android:background="@drawable/btn_confirm_background"
+                        android:minWidth="@dimen/dimens_120"
+                        android:text="@string/btn_label_yes"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorAccentDark"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="@{type!=`confirmation`?View.VISIBLE:View.GONE}">
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="@dimen/dimens_100"
+                        android:layout_height="@dimen/dimens_100"
+                        android:layout_marginBottom="32dp"
+                        android:src="@{type==`success`?@drawable/ic_check_circle:@drawable/ic_error}"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="@{type==`success`?@string/label_submission_successful:@string/label_submission_failed}"
+                        android:textColor="@color/colorTextDefault"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+                        app:layout_constraintStart_toStartOf="@+id/imageView4"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
