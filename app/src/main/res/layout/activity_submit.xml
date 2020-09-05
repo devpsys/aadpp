@@ -10,6 +10,10 @@
         <variable
             name="loading"
             type="Boolean" />
+
+        <variable
+            name="clearForm"
+            type="Boolean" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -89,6 +93,7 @@
             android:textColorHint="@color/colorHintText"
             android:textSize="14sp"
             android:textStyle="bold"
+            android:visibility="@{clearForm?View.GONE:View.VISIBLE}"
             app:layout_constraintEnd_toStartOf="@+id/edtLName"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -110,6 +115,7 @@
             android:textColorHint="@color/colorHintText"
             android:textSize="14sp"
             android:textStyle="bold"
+            android:visibility="@{clearForm?View.GONE:View.VISIBLE}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/edtFName"
             app:layout_constraintTop_toTopOf="@+id/edtFName" />
@@ -131,6 +137,7 @@
             android:textColorHint="@color/colorHintText"
             android:textSize="14sp"
             android:textStyle="bold"
+            android:visibility="@{clearForm?View.GONE:View.VISIBLE}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/edtFName" />
@@ -152,6 +159,7 @@
             android:textColorHint="@color/colorHintText"
             android:textSize="14sp"
             android:textStyle="bold"
+            android:visibility="@{clearForm?View.GONE:View.VISIBLE}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/edtEmail" />
@@ -167,6 +175,7 @@
             android:text="@string/btn_label_submit"
             android:textAllCaps="false"
             android:textColor="@android:color/white"
+            android:visibility="@{clearForm?View.GONE:View.VISIBLE}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/progressBar2" />

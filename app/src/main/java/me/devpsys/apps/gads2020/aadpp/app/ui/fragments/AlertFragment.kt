@@ -80,7 +80,7 @@ class AlertFragment : DialogFragment() {
         super.onAttach(context)
 
         try {
-            listener = parentFragment as OnRequestConfirmationListener
+            listener = activity as OnRequestConfirmationListener
         } catch (e: ClassCastException) {
             throw ClassCastException(
                 (context.toString() +

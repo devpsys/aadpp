@@ -26,6 +26,7 @@ class SubmitActivity : AppCompatActivity(), AlertFragment.OnRequestConfirmationL
 
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_submit)
         mBinding.loading = false
+        mBinding.clearForm = false
 
         events()
     }
@@ -71,6 +72,7 @@ class SubmitActivity : AppCompatActivity(), AlertFragment.OnRequestConfirmationL
                     mBinding.loading = false
                     AlertFragment.newInstance(if (response.isSuccessful) "success" else "failure")
                         .show(supportFragmentManager, "")
+                    mBinding.clearForm = response.isSuccessful
                 }
 
                 override fun onFailure(call: Call<Void>, t: Throwable) {
