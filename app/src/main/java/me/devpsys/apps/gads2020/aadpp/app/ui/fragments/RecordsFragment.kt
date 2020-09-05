@@ -1,14 +1,13 @@
 package me.devpsys.apps.gads2020.aadpp.app.ui.fragments
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
-import me.devpsys.apps.gads2020.aadpp.app.adatpters.RecordsAdapter
+import me.devpsys.apps.gads2020.aadpp.app.adapters.RecordsAdapter
 import me.devpsys.apps.gads2020.aadpp.app.databinding.FragmentRecordsBinding
 import me.devpsys.apps.gads2020.aadpp.app.vmodels.RecordsViewModel
 

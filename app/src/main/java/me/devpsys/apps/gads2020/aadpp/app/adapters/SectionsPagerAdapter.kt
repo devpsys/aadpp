@@ -1,4 +1,4 @@
-package me.devpsys.apps.gads2020.aadpp.app.adatpters
+package me.devpsys.apps.gads2020.aadpp.app.adapters
 
 import android.content.Context
 import androidx.fragment.app.Fragment

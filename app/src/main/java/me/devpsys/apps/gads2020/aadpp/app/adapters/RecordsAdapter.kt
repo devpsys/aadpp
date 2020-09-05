@@ -1,10 +1,8 @@
-package me.devpsys.apps.gads2020.aadpp.app.adatpters
+package me.devpsys.apps.gads2020.aadpp.app.adapters
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.extensions.LayoutContainer
 import me.devpsys.apps.gads2020.aadpp.app.databinding.RecordRecyclerViewItemBinding
 import me.devpsys.apps.gads2020.aadpp.app.models.Record
 
